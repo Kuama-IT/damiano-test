@@ -13,6 +13,17 @@ def createTodo():
     todoList.append(SingTodo(desc))
 
 
+def completeTodo():
+    listTodo()
+    id = input("Quale todo vuoi completare? ")
+    singleTd = next(x for x in todoList if x.id == id)
+    if singleTd:
+        singleTd.complete()
+        print("todo completato \n")
+    else:
+        print("elemento non trovato: \n")
+
+
 def main():
     while(True):
         print("digita 1-lista todo, 2-creazione todo, 3-completa todo, 99 - termina esecuzione\n")
@@ -23,7 +34,7 @@ def main():
             case 2:
                 createTodo()
             case 3:
-                return "I'm a teapot"
+                completeTodo()
             case 99:
                 break
             case _:
