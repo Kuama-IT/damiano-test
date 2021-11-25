@@ -13,3 +13,6 @@ class SingTodo:
 
     def complete(self):
         self.completed = True
+
+    def restore(self):
+        self.completed = False
