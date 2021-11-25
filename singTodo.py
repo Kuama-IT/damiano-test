@@ -1,12 +1,15 @@
 import datetime
+import uuid
 
 class SingTodo:
-    id = 0
+    id = ""
     text = ""
-    createDate = datetime.datetime.now()
     dueDate = datetime.datetime.now()
+    completed = False
 
-    def __init__(self, id, text, dueDate):
-        self.id = id
+    def __init__(self, text):
+        self.id = uuid.uuid4()
         self.text = text
-        self.dueDate = dueDate
+
+    def complete(self):
+        self.completed = True

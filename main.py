@@ -1,3 +1,5 @@
+from singTodo import SingTodo
+
 todoList = []
 
 def listTodo():
@@ -7,8 +9,8 @@ def listTodo():
 
 
 def createTodo():
-    x = input("Digita la descrizione : ")
-    x = input("Scegli l'operazione da eseguire: ")
+    desc = input("Digita la descrizione: ")
+    todoList.append(SingTodo(desc))
 
 
 def main():
